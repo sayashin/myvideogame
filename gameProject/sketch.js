@@ -80,9 +80,12 @@ function draw()
     drawClouds();
 	// Draw mountains.
     drawMountains();
-     pop();
-     push();
+    
+    pop();
+    
+    push();
     translate(scrollPos, 0); 
+    
 	// Draw trees.
     drawTrees();
 
@@ -112,7 +115,7 @@ function draw()
         platforms[i].draw();
     }
     
-//     Draw Enemies
+    // Draw Enemies
     for(var i = 0; i < enemies.length; i++)
     {
         enemies[i].updateParticles();
