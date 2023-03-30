@@ -74,14 +74,15 @@ function draw()
 	rect(0, floorPos_y, width, height/4); // draw some green ground
     
     push();
-    translate(scrollPos, 0); // move the canvas position
+    translate(scrollPos*0.3, 0); // move the canvas position
 
 	// Draw clouds.
     drawClouds();
-
 	// Draw mountains.
     drawMountains();
-
+     pop();
+     push();
+    translate(scrollPos, 0); 
 	// Draw trees.
     drawTrees();
 
@@ -111,7 +112,7 @@ function draw()
         platforms[i].draw();
     }
     
-    // Draw Enemies
+//     Draw Enemies
     for(var i = 0; i < enemies.length; i++)
     {
         enemies[i].updateParticles();
